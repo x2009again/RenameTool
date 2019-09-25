@@ -18,6 +18,7 @@ namespace RenameTool
 
         static void Main(string[] args)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);//处理文件编码不支持gb2312
             Console.Title = "项目重命名工具";
 
             config = Configuration.Build();
